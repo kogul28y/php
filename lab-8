@@ -1,0 +1,29 @@
+HTML Code
+<html>
+<body>
+<form form action="QB8.php" method="POST">
+Enter a Number<br><br>
+Number: <input type="number" name="num"><br><br>
+<input type="submit" name="submit" value="Check"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit'])){
+$divisor=$_POST['num'];
+function Divisibility($divisor)
+{
+$num=32;
+$div=$divisor/$num;
+$mod=$divisor%$num;
+if($mod==0){
+echo $divisor.' is exactly divisible by '. $num.'-'.$div.' times<br/>';
+}
+else{
+echo $divisor.' is not exactly divisible by '. $num.'<br/>';
+}
+}
+Divisibility($divisor);
+}
+?>
