@@ -1,0 +1,24 @@
+HTML Code:
+<html>
+<body>
+<form form action="QB1.php" method="post">
+Area of rectangle<br><br>
+Width:<input type="number" name="width"><br><br>
+Length:<input type="number" name="length"><br><br>
+<input type="submit" name="submit" value="Calculate"><br<br>
+</form>
+</body>
+</html>
+PHP Code:
+<?php
+if (isset($_POST['submit']))
+{
+$side=5;
+$area1=$side*$side;
+$width=$_POST['width'];
+$length=$_POST['length'];
+$area2=$width*$length;
+echo"The area of a square with Side=$side is $area1<br><br>";
+echo"The area of a rectangle with width=$width and length=$length is $area2<br><br>";
+}
+?>
