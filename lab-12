@@ -1,0 +1,41 @@
+HTML Code
+<html>
+<body>
+<form form action="QB10.php" method="POST">
+Enter Three Numbers<br><br>
+A: <input type="number" name="A"><br><br>
+B: <input type="number" name="B"><br><br>
+C: <input type="number" name="C"><br><br>
+<input type="submit" name="submit" value="Check"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit']))
+{
+$a=$_POST['A'];
+$b=$_POST['B'];
+$c=$_POST['C'];
+function findRoots($a, $b, $c)
+{
+// If a is 0, then equation is not quadratic, but linear
+if($a == 0)
+{
+echo "Invalid";
+return;
+}
+$d = $b * $b -( 4 * $a * $c);
+$sqrt_val = sqrt(abs($d));
+if($d == 0)
+{
+echo "YES,Roots are real and same<br>";
+}
+else
+{
+echo "NO,Roots are not real and same<br>";
+}
+}
+findRoots($a, $b, $c);
+}
+?>
