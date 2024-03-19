@@ -1,0 +1,6 @@
+<?php
+$str="Python is a popular scripting language. It is popular that learning Python is essential for 
+Placements.";
+$pattern="/popular/i";
+echo preg_replace($pattern,"very popular",$str);
+?>
