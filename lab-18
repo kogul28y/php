@@ -1,0 +1,6 @@
+<?php
+$date=strtotime('2004-03-04');
+echo "Format 1: ".date("F j")."<br>";
+echo "Format 2: ".date("l, F j,Y")."<br>";
+echo "Format 3: ".date("z ,j, Y")."<br>";
+?>
