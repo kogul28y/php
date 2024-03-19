@@ -1,0 +1,17 @@
+<?php
+function Statistics($arr)
+{
+$num_of_elements=count($arr);
+$variance=0.0;
+$mean=array_sum($arr)/$num_of_elements;
+echo "Mean of the given array is: ".$mean."<br>";
+foreach($arr as $i)
+{
+$variance+=pow(($i-$mean),2);
+}
+$std_dev=sqrt($variance/$num_of_elements);
+echo"Standard Deviation of the given array is: ".$std_dev;
+}
+$arr=array(3,7,9,10,12);
+Statistics($arr);
+?>
