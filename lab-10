@@ -1,0 +1,32 @@
+HTML Code
+<html>
+<body>
+<form form action="QB10.php" method="POST">
+Enter Two Numbers<br><br>
+A: <input type="number" name="A"><br><br>
+B: <input type="number" name="B"><br><br>
+<input type="submit" name="submit" value="Check"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit']))
+{
+$a=$_POST['A'];
+$b=$_POST['B'];
+function findRoots($a, $b)
+{
+$root = -$b/$a;
+if($a>0)
+{
+echo "Roots are real and the root is: $root <br>";
+}
+else
+{
+echo "NO solution <br>";
+}
+}
+findRoots($a, $b);
+}
+?>
