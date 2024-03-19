@@ -1,0 +1,6 @@
+<?php
+$animals = array('a1'=>'Lion','a2' => 'Cat', 'a3' => 'Dog', a4 => 'Tiger', a5 => ‘Zebra’)
+$keysToFilter=array('a1','a4','a5');
+$filteredArray=array_diff_key($animals,array_flip($keysToFilter));
+print_r($filteredArray);
+?
