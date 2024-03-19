@@ -1,0 +1,30 @@
+HTML Code
+<html>
+<body>
+<form form action="QB8.php" method="POST">
+Enter a Number<br><br>
+Number: <input type="number" name="num"><br><br>
+<input type="submit" name="submit" value="Check"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit']))
+{
+$number=$_POST['num'];
+function checkSquare($number)
+{
+$sqrt=sqrt($number);
+if(floor($sqrt)==$sqrt){
+echo"$number is a Perfect Square.\n";
+echo"Square root:$sqrt.\n";
+}
+else
+{
+echo"$number is not a Perfect Square.\n";
+}
+}
+checkSquare($number);
+}
+?>
