@@ -1,0 +1,9 @@
+<?php
+$text="Aadhaar numbers are 12-digit Unique Identification (UID) Numbers 
+that are randomly generated for every resident of India. Aadhaar number 
+of Resident 1 with house no. 436 is 2653 8564 4663. Resident 2 with house no.
+1023 is 9960 4856 2334. Resident 3 with house no. 23 is 1001 2002 345";
+$aadhaar="/\d{4} \d{4} \d{4}/";
+$aadhaarCount=preg_match_all($aadhaar,$text);
+echo"Occurences of Aadhaar numbers is: $aadhaarCount";
+?>
