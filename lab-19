@@ -1,0 +1,15 @@
+<?php
+function fibonacci($n,$first_num=3,$second_num=4)
+{
+if($n==0)
+{
+return;
+}
+echo $first_num." |";
+$next_num=$first_num+$second_num;
+fibonacci($n-1,$second_num,$next_num);
+}
+$n=10;
+echo "Fibonacci Series is: ";
+fibonacci($n);
+?>
