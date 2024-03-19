@@ -1,0 +1,26 @@
+<?php
+function create_historgram($scores){
+$histogram=array_fill(0,11,0);
+foreach($scores as $score){
+if($score>=0 && $score<=100){
+$index=floor($score/10);
+$histogram[$index]++;
+}else{
+echo"Invalid Score: $score<br>";
+}
+}
+return $histogram;
+}
+$scores=array(99,90,89,82,76,74,66,58,45,35,35,28,10,5);
+$histogram=create_historgram($scores);
+if(is_array($histogram)){
+echo"<h2>Histogram</h2>";
+foreach($histogram as $index=>$count){
+$range_start=$index*10;
+$range_end=min($range_start+9,100);
+echo"Scores $range_start-$range_end: $count<br>";
+}
+}else{
+echo"Error Generating Histogram";
+}
+?>
