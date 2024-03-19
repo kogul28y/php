@@ -1,0 +1,7 @@
+<?php
+$filename="MyFile.txt";
+echo readfile("MyFile.txt");
+$lines=file($filename);
+echo $lines[0];
+echo $lines[1];
+?>
