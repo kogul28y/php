@@ -1,0 +1,23 @@
+HTML Code
+<html>
+<body>
+<form form action="QB3.php" method="POST">
+Enter the Values to calculate Compound Interest<br><br>
+Principle Amount: <input type="number" name="p"><br><br>
+<input type="submit" name="submit" value="Calculate"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit']))
+{
+$p=$_POST['p'];
+$R=8;
+$t=4;
+$n=1;
+$r=$R/100;
+$ci=$p*pow((1+($r/$n)),$n*$t);
+echo"Compund Interest is: $ci";
+}
+?>
