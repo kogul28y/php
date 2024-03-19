@@ -1,0 +1,11 @@
+<?php
+if (isset($_POST['submit']))
+{
+$radius=10;
+$area1=3.14*$r*$r;
+$side=5;
+$area2=$width*$length;
+echo"The area of a circle with radius=$radius is $area1<br><br>";
+echo"The area of a square with Side=$side is $area2<br><br>";
+}
+?>
