@@ -1,0 +1,7 @@
+<?php
+$text="House number of Resident 1 is . 6-76/8. Resident 2 with house no.
+1023. Resident 3 with house no. 8-23/2";
+$house_no="#\d{1}-\d{2}/\d{1}#";
+$Count=preg_match_all($house_no,$text);
+echo"Occurences of Aadhaar numbers is: $Count ";
+?>
