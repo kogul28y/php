@@ -1,0 +1,38 @@
+HTML Code
+<html>
+<body>
+<form form action="program3.php" method="POST">
+Enter your Numbers<br><br>
+Number1: <input type="number" name="number1"><br><br>
+Number2: <input type="number" name="number2"><br><br>
+Number3: <input type="number" name="number3"><br><br>
+Number4: <input type="number" name="number4"><br><br>
+<input type="submit" name="submit" value="Check"><br><br>
+</form>
+</body>
+</html>
+PHP Code
+<?php
+if(isset($_POST['submit']))
+{
+$number1=$_POST['number1'];
+$number2=$_POST['number2'];
+$number3=$_POST['number3'];
+$number4=$_POST['number4'];
+function check($number)
+{
+if($number%2==0)
+{
+echo"The Number $number is Even<br>";
+}
+else
+{
+echo"The Number $number is Odd<br>";
+}
+}
+check($number1);
+check($number2);
+check($number3);
+check($number4);
+}
+?>
