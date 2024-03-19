@@ -1,0 +1,7 @@
+<?php
+$string1='Canara';
+$string2=' Engineering college';
+$result=$string1.$string2;
+$len=strlen($result);
+echo 'Concatenation of strings:' . $result. '<br>'.'And length of the string is '.$len;
+?>
