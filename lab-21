@@ -1,0 +1,10 @@
+PHP Code
+<?php
+$filename="MyFile.txt";
+$searchWord=PHP;
+$content=file_get_contents($filename);
+$wordCount=substr_count($content,$searchWord);
+echo "<h3>Frequency of '$searchWord' in the file:</h3>";
+echo "<p>$wordCount occurences </p>";
+}
+?
